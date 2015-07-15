@@ -14,6 +14,7 @@ define([
         var view = new UserCollectionView({ el: "#contact-list", collection: users });
       }
     });
+
     new ChatController();
   };
 

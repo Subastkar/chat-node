@@ -18,9 +18,7 @@ define(['backbone','socket-io','views/messages'],function(Backbone, io, Messages
 
       isNotEmpty = $.trim($message.val()).length > 0;
 
-      if(isNotEmpty){
-        this.io.emit('chat message', $message.val());
-      }
+      if(isNotEmpty){ this.io.emit('chat message', $message.val()); }
 
       $message.val('');
       return false;
